@@ -53,6 +53,20 @@
         border-radius: 15px;
         box-shadow: 0px 0px 3px 3px #1b1b1b ;
 
+        /* initial drop in state */
+
+        opacity: 0;
+        transform: translateY(-10px);
+        animation: dropIn 1s cubic-bezier(0.645, 0.045, 0.355, 1) 0.25s forwards;
+
+    }
+
+
+    @keyframes dropIn {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
 

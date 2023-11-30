@@ -1,6 +1,32 @@
+<script>
+    /* dynmaic highlighting of navigation items based on page */
+    import { beforeUpdate } from "svelte";
+
+
+    let currentRoute = "";
+
+    const updateRoute = () => {
+        currentRoute = window.location.pathname;
+    };
+
+
+    /* update route before component renders */
+    beforeUpdate(() => {
+        updateRoute();
+        window.addEventListener("popstate", updateRoute);
+    });
+
+    /* Check if nav item should be highligted */
+    const isHighlighted = (itemRoute) => {
+
+        return itemRoute === currentRoute;
+    }
+
+
+</script>
+
+
 <style>
-
-
     .container {
         width: 100%;
         display: flex;
@@ -9,6 +35,7 @@
         padding: 30px 50px;
         position: fixed;
         top: 0;
+        z-index: 1;
     }
 
     .navigation ul {
@@ -27,7 +54,7 @@
     }
 
     .navigation a:hover {
-        color: #682AE9;
+        color: #b0e994;
         padding-top: 0;
         padding-bottom: 4px;
     }
@@ -117,6 +144,10 @@
     }
     */
 
+    .highlighted {
+        color: #b0e994 !important;
+    }
+
     @keyframes dropIn {
         to {
             opacity: 1;
@@ -155,14 +186,14 @@
           <nav class="navigation">
               <ul>
                   <li class="about">
-                    <a href="/about">
+                    <a class:highlighted={isHighlighted('/about')} href="/about">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
                       About
                     </a>
                   </li>
 
                   <li class="blogs">
-                    <a href="/blogs">
+                    <a class:highlighted={isHighlighted('/blogs')} href="/blogs">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-book-open"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
                       Blogs
                     </a>
