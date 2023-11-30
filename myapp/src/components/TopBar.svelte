@@ -18,8 +18,15 @@
 
     /* Check if nav item should be highligted */
     const isHighlighted = (itemRoute) => {
-
         return itemRoute === currentRoute;
+    }
+
+    const determineInitials = () => {
+        return currentRoute === "/" ? "SN" : "simon nguyen";
+    };
+
+    const barContainer = () => {
+        return currentRoute === "/" ? "container" : "container darkenContainer";
     }
 
 
@@ -27,6 +34,7 @@
 
 
 <style>
+
     .container {
         width: 100%;
         display: flex;
@@ -36,6 +44,17 @@
         position: fixed;
         top: 0;
         z-index: 1;
+    }
+
+    .darkenContainer {
+        background-color: rgba(0, 0, 0, 0.2);
+        padding: 10px 50px !important;
+        box-shadow: 0px 0px 3px 3px;
+        z-index: 6;
+
+        /* blur elements behind nav bar */
+        -webkit-backdrop-filter: blur(4px);
+        backdrop-filter: blur(4px);
     }
 
     .navigation ul {
@@ -121,7 +140,11 @@
         font-size: 20px;
         font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
         /* padding: 0px 0px 2px 0px; */
+        color: white;
+        text-decoration: none;
+        padding-left: 1.7vw;
     }
+
 
     .about {
         opacity: 0;
@@ -177,28 +200,28 @@
 </style>
 
 
-<div class="container">
-          <div class="logo-container">
-            <div class="circle">
-                    <div class="initials">SN</div>
-            </div>
-          </div>
-          <nav class="navigation">
-              <ul>
-                  <li class="about">
-                    <a class:highlighted={isHighlighted('/about')} href="/about">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                      About
-                    </a>
-                  </li>
+<div class="{barContainer()}">
+        <div class="logo-container">
+        <div class="circle">
+                <a class="initials" href="/" >{determineInitials()}</a>
+        </div>
+        </div>
+        <nav class="navigation">
+            <ul>
+                <li class="about">
+                <a class:highlighted={isHighlighted('/about')} href="/about">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    About
+                </a>
+                </li>
 
-                  <li class="blogs">
-                    <a class:highlighted={isHighlighted('/blogs')} href="/blogs">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-book-open"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
-                      Blogs
-                    </a>
-                  </li>
-  
-              </ul>
-          </nav>
+                <li class="blogs">
+                <a class:highlighted={isHighlighted('/blogs')} href="/blogs">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-book-open"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                    Blogs
+                </a>
+                </li>
+
+            </ul>
+        </nav>
 </div>
