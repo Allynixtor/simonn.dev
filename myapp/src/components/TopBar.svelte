@@ -53,8 +53,8 @@
         z-index: 6;
 
         /* blur elements behind nav bar */
-        -webkit-backdrop-filter: blur(4px);
-        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
     }
 
     .navigation ul {
