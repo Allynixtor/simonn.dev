@@ -102,3 +102,56 @@ function orderPostsByDate(categoryPosts) {
             : 0
     })
 }
+
+// import { readdirSync, readFileSync} from 'fs';
+// import { join } from 'path';
+// import matter from 'gray-matter';
+
+
+// // @ts-ignore
+// export function getBlogs(root) {
+//     //const blogsRoot = '/src/data/projects';
+//     // readdirSync returns an array of strings for the filenames in specified directory/route
+//     const categories = readdirSync(root);
+
+//     // reduce ((accumlator, currValue))
+//     // @ts-ignore
+//     const postsByCategory = categories.reduce((result, category) => {
+//         const categoryPath = join(root, category);
+//         const files = readdirSync(categoryPath);
+    
+//         // @ts-ignore
+//         const categoryPosts = files.map((file) => {
+//           const filePath = join(categoryPath, file);
+//           const content = readFileSync(filePath, 'utf8');
+//           const { data } = matter(content);
+    
+//           return {
+//             title: data.title || '',
+//             description: data.description || '',
+//             image: data.image || '',
+//             blog: content,
+//             date: data.date || '',
+//           };
+//         });
+    
+//         // @ts-ignore
+//         result[category] = orderPostsByDate(categoryPosts);
+    
+//         return result;
+//       }, {});
+    
+//       return postsByCategory;
+// }
+
+// // @ts-ignore
+// function orderPostsByDate(categoryPosts) {
+//     // @ts-ignore
+//     return categoryPosts.sort((a, b) => {
+//         new Date(a.date).getTime() > new Date(b.date).getTime()
+//             ? -1
+//             : new Date(a.date).getTime() < new Date(b.date).getTime()
+//             ? 1
+//             : 0
+//     })
+// }

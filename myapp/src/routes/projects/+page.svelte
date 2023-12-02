@@ -1,21 +1,18 @@
 <script>
   import TopBar from "../../components/TopBar.svelte";
+  import ProjectCategory from "../../components/ProjectCategory.svelte";
 
   /*
-   In SvelteKit, the data loaded in the load function is automatically passed to the Svelte component as props. 
-   To access the prop passed: export let prop-name
+   In SvelteKit, the data loaded in the load function is automatically passed to the Svelte component as the prop "data"
+   To access the prop passed: export let data
   */
 
-  export let projectsByCategory;
+  export let data;
 
-  let categories = [];
+  console.log(JSON.stringify(data, 0, 2));
 
-  // Use a reactive statement to wait for projectsByCategory to be available
-  $: {
-    if (projectsByCategory) {
-      categories = Object.keys(projectsByCategory);
-    }
-  }
+  const categories = data.categories;
+  const projects = data.projectsByCategory;
 
 </script>
 
@@ -139,8 +136,8 @@
     </div>
     <div class="topics">
       {#each categories as category}
-        <a href={`./${category}`}>{category}</a>
-    {/each}
+        <ProjectCategory category={category} projects={projects}/>
+      {/each}
     </div>
   </div>
 </div>

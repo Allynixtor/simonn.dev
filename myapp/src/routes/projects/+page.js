@@ -1,32 +1,62 @@
+// Pre=rendering/loading blogs before svelte page is rendered
 // @ts-nocheck
-import { getBlogs } from "../../utils/getBlogs";
-
 export async function load() {
 
-    const projectsByCategory = getBlogs('./src/data/projects');
+  // grab blogs
+  //  default: SvelteComponent; metadata: Record<string, any>
+  const glob_import = import.meta.glob('../../data/projects/**/*.svx',
+    {
+      eager: true
+    }
+  );
 
-    if (!projectsByCategory) {
-        return { status: 404, error: new Error("No projects yet :(") };
+
+  /* 
+  writings: [
+    [blog1],
+    [blog2]
+  ]
+
+  blog: [
+    "path",  (eg. "../../data/projects/security/advent_of_code.svx")
+    {
+      "default": {},
+      "metadata": {
+        "title": "COMP6841 CTF 2023",
+        "description": "Check out how I came equal first place in my first CTF that was created for the UNSW COMP6841 security course.",
+        "category": "security",
+        "image": "/assets/images/blog_posts/security/comp6841_ctf.png",
+        "blog": "/src/data/projects/security/comp6841_ctf.mdx",
+        "date": "2023-12-02"
       }
+    }
+  ]
+  */
 
-    return { props: {projectsByCategory}};
-  }
+  const categories = ['security', 'teaching', 'web-dev'];
+
+  let data = {};
+  data['categories'] = categories;
 
 
+  const writings = Object.entries(glob_import);
 
+  // console.log(JSON.stringify(writings, 0, 2));
+  // console.log({ writings });
 
+ let projectsByCategory = categories.reduce((acc, category) => {
+  // @ts-ignore
+    acc[category] = [];
+    return acc;
+ }, {});
 
+ writings.forEach((blogGlob) => {
+  const blogObj = blogGlob[1];
+  const metadata = blogObj.metadata;
+  projectsByCategory[metadata.category].push(metadata);
+ })
 
-// import { error } from '@sveltejs/kit';
+ data['projectsByCategory'] = projectsByCategory;
 
-// /** @type {import('./$types').PageLoad} */
-// export function load({ params }) {
-// 	if (params.slug === 'hello-world') {
-// 		return {
-// 			title: 'Hello world!',
-// 			content: 'Welcome to our blog. Lorem ipsum dolor sit amet...'
-// 		};
-// 	}
-
-// 	throw error(404, 'Not found');
-// }
+  return data;
+}
