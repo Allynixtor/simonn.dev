@@ -16,9 +16,24 @@
     background: black;
     border-radius: 20px;
     /* box-shadow: 0px 0px 10px {categoryColour}; */
-    width: 400px;
-    height: 480px;
+    max-width: 350px;
+
+    /* width: 30%; */
+    /* for small sized windows, dramatically increase width of card */
+    width: 400%;
+    /* height: auto; */
     display: block;
+
+    /* for lifting effect when mouse hovers over */
+    transition: transform 0.3s ease;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.card:hover {
+    transform: translateY(-20px);
 }
 
 .pinkShadow {
@@ -52,16 +67,18 @@
 
 .card-info  {
     font-size: 20px;
-    margin: 10px 25px 5px 25px;
+    margin: 10px 12px 5px 12px;
 }
 
-.card-info > h4 {
+.title {
+    font-size: 18px;
+    font-weight: bold;
     margin-bottom: 0;
 } 
 
 .date {
     margin-bottom: 10px;
-    font-size: 12px;
+    font-size: 10px;
     display: block;
 }
 
@@ -70,6 +87,8 @@
     color: #aeaeae;
     display: block;
     font-size: 15px;
+    line-height: 1.2em;
+    
 }
 
 /* use for future tags implementation?
@@ -93,7 +112,7 @@
         <img src={projectData.image} alt="comp6841_ctf">
     </div>
     <div class="card-info">
-        <h4> {projectData.title} </h4>
+        <div class="title"> {projectData.title} </div>
         <span class="date"> {projectData.date} </span>
         <p class="description"> {projectData.description}</p>
     </div>

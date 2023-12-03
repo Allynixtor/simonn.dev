@@ -40,15 +40,19 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 30px 50px;
+        /* padding: 30px 50px; */
+        margin-top: 30px;
         position: fixed;
         top: 0;
         z-index: 1;
+
     }
+    
 
     .darkenContainer {
         background-color: rgba(0, 0, 0, 0.2);
-        padding: 10px 50px !important;
+        margin-top: 0px !important;
+        padding: 7px 50px; 
         box-shadow: 0px 0px 3px 3px;
         z-index: 6;
 

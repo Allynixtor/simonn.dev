@@ -1,6 +1,6 @@
 ---
-title: "TryHackMe Advent of Code"
-description: "Check out how I came equal first place in my first CTF that was created for the UNSW COMP6841 security course."
+title: "TryHackMe Advent of Code 2023"
+description: "Check out how I came equal"
 category: "security"
 image: "/assets/images/blog_posts/security/comp6841_ctf.png"
 blog: "/src/data/projects/security/comp6841_ctf.mdx"

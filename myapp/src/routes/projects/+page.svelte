@@ -29,19 +29,27 @@
 
 <style>
 
+  :global(body) {
+    margin: 0;
+    padding: 0;
+  }
+
   .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     /* if i dont want scroll bar visible
     position: fixed;
     */
 
+  
+
     inset: 0 0 0 0;
     z-index: 0;
 
-    padding: 0;
+    padding: 0 !important;
+
 
     /* Set a transparent background */
     background-color: rgba(0, 0, 0, 0.6);
@@ -87,11 +95,11 @@
     .content {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-around;
+        align-items: center;
+        justify-content: center;
         /* width: 93%; */
         /* to fit scroll bar into content section */
-        width: 98.7%;
+        width: 93%;
         margin-top: 130px; 
 
         font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -114,7 +122,7 @@
     .content > * {
         width: 96%;
         margin-bottom: 4%;
-        margin-left: 2%;
+        /* margin-left: 2%; */
     }
 
     .heading {
@@ -125,7 +133,12 @@
     }
 
     .topics {
-
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      
     }
 
 

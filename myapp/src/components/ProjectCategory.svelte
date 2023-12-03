@@ -13,21 +13,28 @@
 
 <style>
 .container {
-    width: 96%;
+    width: 100%;
     margin-bottom: 4%;
-    margin-left: 2%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
 .projectCards {
+
+    
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: space-between;
+    align-items: stretch;
     column-gap: 20px;
-    margin-top: 25px;
+    row-gap: 60px;
+    margin-top: 40px;
+    width: 100%;
+
+    
+
+    /* grid alternative? */
 }
 
 </style>
