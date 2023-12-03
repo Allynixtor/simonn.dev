@@ -87,7 +87,8 @@ export function getBlogs(root) {
     
         return result;
       }, {});
-    
+
+
       return postsByCategory;
 }
 

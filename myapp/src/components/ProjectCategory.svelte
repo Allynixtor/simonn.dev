@@ -1,5 +1,6 @@
 
 <script>
+  import NeonText from './NeonText.svelte';
   // retrieving props equilvalent
   // eg. This component was <ProjectCategory category={value} />
   export let category;
@@ -12,7 +13,7 @@
 </script>
 
 <div class="container">
-    <h1> {category} </h1>
+    <NeonText text={category} tag={"h2"}/>
     <ul>
         {#each categoryProjects as project}
             <li>

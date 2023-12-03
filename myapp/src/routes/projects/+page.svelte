@@ -1,5 +1,6 @@
 <script>
   import TopBar from "../../components/TopBar.svelte";
+  import NeonText from "../../components/NeonText.svelte";
   import ProjectCategory from "../../components/ProjectCategory.svelte";
 
   /*
@@ -111,7 +112,6 @@
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
-
     }
 
 
@@ -131,7 +131,7 @@
   <TopBar />
   <div class="content">
     <div class="heading">
-        <h1 class="subheadings"> My Projects! </h1>
+        <NeonText text="My Projects!" tag="h1"/>
         Here are some of the cool things I've been up to :D
     </div>
     <div class="topics">

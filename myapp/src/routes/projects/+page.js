@@ -33,13 +33,16 @@ export async function load() {
   ]
   */
 
+
+  const writings = Object.entries(glob_import);
+
   const categories = ['security', 'teaching', 'web-dev'];
 
   let data = {};
   data['categories'] = categories;
 
 
-  const writings = Object.entries(glob_import);
+
 
   // console.log(JSON.stringify(writings, 0, 2));
   // console.log({ writings });
