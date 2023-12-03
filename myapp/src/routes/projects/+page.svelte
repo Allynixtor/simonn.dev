@@ -99,7 +99,7 @@
         justify-content: center;
         /* width: 93%; */
         /* to fit scroll bar into content section */
-        width: 93%;
+        width: 70%;
         margin-top: 130px; 
 
         font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -109,8 +109,43 @@
         
     }
 
+    
+
+    @media screen and (min-width: 1397px) and (max-width: 1591px) {
+      .content {
+          width: 80%;
+      }
+    }
+
+    @media screen and (min-width: 1246px) and (max-width: 1396px) {
+      .content {
+          width: 90%;
+      }
+    }
+
+    @media screen and (min-width: 1116px) and (max-width: 1245px) {
+      .content {
+          width: 80%;
+      }
+    }
+
+    @media screen and (min-width: 996px) and (max-width: 1115px) {
+      .content {
+          width: 90%;
+      }
+    }
+
+    @media screen and (min-width: 0px) and (max-width: 995px) {
+      .content {
+          width: 90%;
+      }
+    }
 
 
+
+  
+
+  
     .subheadings {
         margin-top: 0px;
     }
@@ -136,9 +171,8 @@
       width: 100%;
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      
+      justify-content: space-around;
+      align-items: center;      
     }
 
 

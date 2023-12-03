@@ -32,6 +32,35 @@
 
 }
 
+ @media screen and (min-width: 996px) and (max-width: 1245px) {
+      .card {
+          width: 275px;
+      }
+    }   
+
+     @media screen and (min-width: 0px) and (max-width: 995px) {
+      .card {
+          width: 200px;
+      }
+    }  
+
+/*
+@media screen and (min-width: 1270px) and (max-width: 1591px) {
+    .card {
+        width: 275px
+    }
+}
+
+
+
+@media screen and (min-width:)(max-width: 1269px) {
+    .card {
+        width: 275px
+    }
+}
+*/
+
+
 .card:hover {
     transform: translateY(-20px);
 }
