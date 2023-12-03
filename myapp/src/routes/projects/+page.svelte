@@ -15,6 +15,16 @@
   const categories = data.categories;
   const projects = data.projectsByCategory;
 
+  // Alternate category colours
+  let currentColourIndex = 0;
+
+  function getCategoryColour() {
+    const colours = ['pink', 'blue', 'yellow'];
+    const colour = colours[currentColourIndex];
+    currentColourIndex = (currentColourIndex + 1) % colours.length;
+    return colour;
+  }
+
 </script>
 
 <style>
@@ -114,6 +124,10 @@
       align-items: center;
     }
 
+    .topics {
+
+    }
+
 
 
     @keyframes dropIn {
@@ -131,12 +145,12 @@
   <TopBar />
   <div class="content">
     <div class="heading">
-        <NeonText text="My Projects!" tag="h1"/>
+        <NeonText text="My Projects!" tag="h1" colour="green"/>
         Here are some of the cool things I've been up to :D
     </div>
     <div class="topics">
       {#each categories as category}
-        <ProjectCategory category={category} projects={projects}/>
+        <ProjectCategory category={category} projects={projects} colour={getCategoryColour()}/>
       {/each}
     </div>
   </div>

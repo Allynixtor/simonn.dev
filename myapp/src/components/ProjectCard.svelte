@@ -1,0 +1,108 @@
+<script>
+    export let categoryColour;
+    export let projectData;
+
+    const cardShadow = {
+        blue: 'blueShadow',
+        pink: 'pinkShadow',
+        yellow: 'yellowShadow'
+    }
+
+</script>
+
+<style>
+
+.card {
+    background: black;
+    border-radius: 20px;
+    /* box-shadow: 0px 0px 10px {categoryColour}; */
+    width: 400px;
+    height: 480px;
+    display: block;
+}
+
+.pinkShadow {
+    box-shadow: 0px 0px 10px #ff00ff;
+}
+
+.blueShadow {
+    box-shadow: 0px 0px 10px #00f;
+}
+
+
+.yellowShadow {
+    box-shadow: 0px 0px 10px #ff0;
+}
+
+.card-top img {
+    width: 100%;
+    height: auto;
+}
+
+.card-top {
+    /* match border radius of card */
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    /* hide image overflowing */
+    overflow: hidden;
+
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.card-info  {
+    font-size: 20px;
+    margin: 10px 25px 5px 25px;
+}
+
+.card-info > h4 {
+    margin-bottom: 0;
+} 
+
+.date {
+    margin-bottom: 10px;
+    font-size: 12px;
+    display: block;
+}
+
+
+.description {
+    color: #aeaeae;
+    display: block;
+    font-size: 15px;
+}
+
+/* use for future tags implementation?
+
+.flex-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+*/
+
+
+</style>
+
+
+
+
+<div class="card {cardShadow[categoryColour]}">
+    <div class="card-top">
+        <img src={projectData.image} alt="comp6841_ctf">
+    </div>
+    <div class="card-info">
+        <h4> {projectData.title} </h4>
+        <span class="date"> {projectData.date} </span>
+        <p class="description"> {projectData.description}</p>
+    </div>
+
+    <!---
+    <div class="card-bottom flex-row">
+        <a href="#" class="blog button"> Blog </a>
+    </div>
+    --->
+
+
+</div>

@@ -47,6 +47,8 @@ export async function load() {
   // console.log(JSON.stringify(writings, 0, 2));
   // console.log({ writings });
 
+  // Starting with acc = {}, create a new object with each category as a key, and value of an empty array
+  // to store all the metadata of blogs in that category
  let projectsByCategory = categories.reduce((acc, category) => {
   // @ts-ignore
     acc[category] = [];
@@ -60,6 +62,8 @@ export async function load() {
  })
 
  data['projectsByCategory'] = projectsByCategory;
+
+ console.log(JSON.stringify(projectsByCategory, 0, 2));
 
   return data;
 }
