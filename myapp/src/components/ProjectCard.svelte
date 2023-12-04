@@ -36,33 +36,36 @@
 
 }
 
+
  @media screen and (min-width: 996px) and (max-width: 1245px) {
       .card {
           width: 275px;
       }
-    }   
+}   
 
-     @media screen and (min-width: 0px) and (max-width: 995px) {
+@media screen and (min-width: 0px) and (max-width: 995px) {
+    .card {
+        width: 200px;
+    }
+
+    .card-top {
+            height: 139px;
+    }
+
+}  
+
+ @media screen and (min-width: 996px) {
       .card {
-          width: 200px;
+          width: 275px;
       }
-    }  
 
-/*
-@media screen and (min-width: 1270px) and (max-width: 1591px) {
-    .card {
-        width: 275px
-    }
-}
+      .card-top {
+        height: 200px;
+      }
+}   
 
 
 
-@media screen and (min-width:)(max-width: 1269px) {
-    .card {
-        width: 275px
-    }
-}
-*/
 
 
 .card:hover {
@@ -87,6 +90,7 @@
 .card-top img {
     width: 100%;
     height: auto;
+ 
 }
 
 .card-top {
@@ -96,8 +100,7 @@
     /* hide image overflowing */
     overflow: hidden;
 
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%; 
 }
 
 .card-info  {
@@ -142,7 +145,7 @@
 
 <a href={projectData.blog} class="card {cardShadow[categoryColour]}">
     <div class="card-top">
-        <img src={projectData.image} alt="comp6841_ctf">
+        <img src={projectData.image} alt={projectData.title}>
     </div>
     <div class="card-info">
         <div class="title"> {projectData.title} </div>

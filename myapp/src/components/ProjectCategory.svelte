@@ -47,10 +47,10 @@
     /* grid alternative? */
 }
 
-<!-- 
+/*
 Different layouts to display blog cards nicely
-depending on number of blogs avaliable in a specific category
--->
+depending on number of blogs avaliable in a specific category 
+*/
 
 .justifyProjectCardsSpaceBetween {
     justify-content: space-between;
