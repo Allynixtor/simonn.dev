@@ -2,8 +2,8 @@
 title: "TryHackMe Advent of Code"
 description: "Check out how I came equal first place in my first CTF that was created for the UNSW COMP6841 security course."
 category: "security"
-image: "/assets/images/blog_posts/security/comp6841_ctf.png"
-blog: "/src/data/projects/security/comp6841_ctf.mdx"
+image: "/assets/images/blog_posts/security/tryhackme_adventOfCode.png"
+blog: "projects/advent_of_code"
 date: "2023-12-02"
 ---
 

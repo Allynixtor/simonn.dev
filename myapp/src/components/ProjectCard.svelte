@@ -139,10 +139,7 @@
 
 </style>
 
-<!--
-<a href=`/projects/${project.slug}` class="card {cardShadow[categoryColour]}">
 
--->
 <a href={projectData.blog} class="card {cardShadow[categoryColour]}">
     <div class="card-top">
         <img src={projectData.image} alt="comp6841_ctf">
