@@ -55,9 +55,6 @@
 }  
 
  @media screen and (min-width: 996px) {
-      .card {
-          width: 275px;
-      }
 
       .card-top {
         height: 200px;
