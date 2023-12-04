@@ -3,7 +3,7 @@ title: "COMP6841 CTF 2023"
 description: "Check out how I came equal first place in my first CTF that was created for the UNSW COMP6841 security course."
 category: "security"
 image: "/assets/images/blog_posts/security/comp6841_ctf.png"
-blog: "/src/data/projects/security/comp6841_ctf.mdx"
+blog: "projects/comp6841_ctf_2023"
 date: "2023-11-26"
 ---
 

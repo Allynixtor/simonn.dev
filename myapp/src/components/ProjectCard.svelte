@@ -1,6 +1,7 @@
 <script>
     export let categoryColour;
     export let projectData;
+    export let project;
 
     const cardShadow = {
         blue: 'blueShadow',
@@ -29,6 +30,9 @@
 
     display: flex;
     flex-direction: column;
+
+    text-decoration: none;
+    color: white;
 
 }
 
@@ -63,6 +67,8 @@
 
 .card:hover {
     transform: translateY(-20px);
+    cursor: pointer;
+
 }
 
 .pinkShadow {
@@ -133,10 +139,11 @@
 
 </style>
 
+<!--
+<a href=`/projects/${project.slug}` class="card {cardShadow[categoryColour]}">
 
-
-
-<div class="card {cardShadow[categoryColour]}">
+-->
+<a href={projectData.blog} class="card {cardShadow[categoryColour]}">
     <div class="card-top">
         <img src={projectData.image} alt="comp6841_ctf">
     </div>
@@ -153,4 +160,4 @@
     --->
 
 
-</div>
+</a>

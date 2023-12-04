@@ -4,7 +4,7 @@ export async function load() {
 
   // grab blogs
   //  default: SvelteComponent; metadata: Record<string, any>
-  const glob_import = import.meta.glob('../../data/projects/**/*.svx',
+  const glob_import = import.meta.glob('../../data/projects/*.svx',
     {
       eager: true
     }

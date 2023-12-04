@@ -1,8 +1,8 @@
 <script>
-  export let params;
+  export let project;
 </script>
 
 <div>
-  <h1>{params.slug}</h1>
-  <!-- Render other project details -->
+  <h1>{project.title}</h1>
+  <p>{project.description}</p>
 </div>
