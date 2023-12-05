@@ -63,7 +63,5 @@ export async function load() {
 
  data['projectsByCategory'] = projectsByCategory;
 
- console.log(JSON.stringify(projectsByCategory, 0, 2));
-
   return data;
 }

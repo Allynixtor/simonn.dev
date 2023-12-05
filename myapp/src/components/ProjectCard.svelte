@@ -1,7 +1,6 @@
 <script>
     export let categoryColour;
     export let projectData;
-    export let project;
 
     const cardShadow = {
         blue: 'blueShadow',

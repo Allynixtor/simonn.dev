@@ -10,8 +10,6 @@
 
   export let data;
 
-  console.log(JSON.stringify(data, 0, 2));
-
   const categories = data.categories;
   const projects = data.projectsByCategory;
 
@@ -141,11 +139,6 @@
       }
     }
 
-
-
-  
-
-  
     .subheadings {
         margin-top: 0px;
     }
