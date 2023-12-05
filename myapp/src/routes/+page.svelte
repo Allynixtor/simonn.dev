@@ -79,7 +79,7 @@
     <div class="content contentCover">
         <Intro/>
         <section>
-            <div class="profilePic" use:setProfileImage/>
+            <div class="profilePic"/>
         </section>
     </div>
 </div>

@@ -1,10 +1,10 @@
 ---
 title: "CSESoc Learn"
-description: "Check out how I came equal first place in my first CTF that was created for the UNSW COMP6841 security course."
+description: "A Learning Platform for the CSESoc community to learn and share their knowledge and expertise in Computer Science."
 category: "web-dev"
-image: "/assets/images/blog_posts/security/comp6841_ctf.png"
-blog: "/src/data/projects/security/comp6841_ctf.mdx"
+image: "/assets/images/blog_posts/web-dev/csesoc_learn.png"
+blog: "projects/csesoc_learn.svx"
 date: "2023-12-02"
 ---
 
-# COMP6841 CTF 2023
+# CSESoc Learn

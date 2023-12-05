@@ -184,9 +184,7 @@
 
 
     @media (max-width: 680px) {
-        .navigation {
-            display: none;
-        }
+
         .container {
             padding: 30px 40px;
         }
