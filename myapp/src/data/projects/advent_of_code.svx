@@ -5,6 +5,7 @@ category: "security"
 image: "/assets/images/blog_posts/security/tryhackme_adventOfCode.png"
 blog: "projects/advent_of_code"
 date: "2023-12-02"
+completed: "no"
 ---
 
 # COMP6841 CTF 2023

@@ -3,8 +3,9 @@ title: "CSESoc Learn"
 description: "A Learning Platform for the CSESoc community to learn and share their knowledge and expertise in Computer Science."
 category: "web-dev"
 image: "/assets/images/blog_posts/web-dev/csesoc_learn.png"
-blog: "projects/csesoc_learn.svx"
+blog: "projects/csesoc_learn"
 date: "2023-12-02"
+completed: "no"
 ---
 
 # CSESoc Learn
