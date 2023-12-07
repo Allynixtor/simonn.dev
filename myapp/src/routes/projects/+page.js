@@ -59,6 +59,14 @@ export async function load() {
   const blogObj = blogGlob[1];
   const metadata = blogObj.metadata;
   projectsByCategory[metadata.category].push(metadata);
+ });
+
+ // Sort blogs in each category by date
+ Object.keys(projectsByCategory).forEach((category) => {
+  console.log(projectsByCategory[category]);
+  projectsByCategory[category].sort((blog1, blog2) => {
+    return new Date(blog2.date).getTime() - new Date(blog1.date).getTime();
+  })
  })
 
  data['projectsByCategory'] = projectsByCategory;

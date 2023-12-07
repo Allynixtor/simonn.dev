@@ -4,7 +4,7 @@ description: "An article guide on how both attackers and defenders can use Nmap 
 category: "security"
 image: "/assets/images/blog_posts/security/nmap.png"
 blog: "projects/nmap.svx"
-date: "2023-11-26"
+date: "2023-11-27"
 ---
 
 # Network Enumeration with Nmap
