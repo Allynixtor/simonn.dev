@@ -1,0 +1,11 @@
+---
+title: "SIEM fundamentals guide"
+description: "An article guide on how organisations can use SIEM solutions to effectively monitor, detect, and respond to cyber threats."
+category: "security"
+image: "/assets/images/blog_posts/security/siem.jpg"
+blog: "projects/siem"
+date: "2023-11-10"
+completed: "no"
+---
+
+# Network Enumeration with Nmap

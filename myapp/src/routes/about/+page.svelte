@@ -202,7 +202,7 @@
             <div class="paragraph"> From 2022 to 2024, I was the Education Director for the Computer Science and Engineering Society @ UNSW,
             where I led a team of 15 to deliver numerous compsci related workshops and resources. 
             My other responsibilities include academic tutoring, and volunteering for St John's Ambulance. </div>
-            <div class="paragraph"> Some of the things I enjoy doing is riding my motocycle, freediving, photography, teaching, and most recently, diving into the rabbit hole of the Security Engineering side of Computer Science. </div>
+            <div class="paragraph"> Some of the things I enjoy doing is riding my motorcycle, freediving, photography, teaching, and most recently, diving into the rabbit hole of the Security Engineering side of Computer Science. </div>
             <div class="paragraph"> Check out my <a href="/projects">projects</a> for some of the cool things I've been up to!</div>
         </div>
     </div>

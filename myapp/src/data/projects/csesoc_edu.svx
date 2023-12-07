@@ -1,0 +1,11 @@
+---
+title: "CSESoc Education Director"
+description: "From 2022 to 2024, I led a team of 15 to deliver numerous compsci related workshops and resources with the primary aim of upskilling the technical skills of UNSW computing students. Check out this blog for the list of initiatives I've led and our accomplishments."
+category: "teaching"
+image: "/assets/images/blog_posts/teaching/csesoc_edu.PNG"
+blog: "projects/csesoc_edu"
+date: "2023-12-08"
+completed: "no"
+---
+
+# CSESoc Learn

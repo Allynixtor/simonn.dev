@@ -1,0 +1,11 @@
+---
+title: "My first personal website :D"
+description: "Check out why I chose to learn and use the Svelte framework to build this website!"
+category: "web-dev"
+image: "/assets/images/blog_posts/web-dev/personal-website.png"
+blog: "projects/personal-website"
+date: "2023-11-07"
+completed: "no"
+---
+
+# My first personal website :D

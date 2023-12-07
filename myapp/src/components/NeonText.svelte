@@ -14,7 +14,8 @@
         green: 'greenNeon',
         blue: 'blueNeon',
         pink: 'pinkNeon',
-        yellow: 'yellowNeon'
+        yellow: 'yellowNeon',
+        red: 'redNeon'
     }
 
     let neonComponent = '';
@@ -104,6 +105,23 @@
     0 0 151px #ff0;
 
     animation: yellowPulsate 2.5s infinite alternate;  
+}
+
+:global(.redNeon) {
+  color: #fff;
+  text-shadow:
+    /* White glow */
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    /* Red glow */
+    0 0 42px #f00,
+    0 0 82px #f00,
+    0 0 92px #f00,
+    0 0 102px #f00,
+    0 0 151px #f00;
+
+  animation: redPulsate 2.5s infinite alternate;
 }
 
 :global(.neonText) {
@@ -245,6 +263,33 @@
       0 0 55px #ff0,
       0 0 70px #ff0,
       0 0 80px #ff0;
+  }
+}
+
+@keyframes redPulsate {
+  100% {
+    /* Larger blur radius */
+    text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px #f00,
+      0 0 80px #f00,
+      0 0 90px #f00,
+      0 0 100px #f00,
+      0 0 150px #f00;
+  }
+  0% {
+    /* Smaller blur radius */
+    text-shadow:
+      0 0 2px #fff,
+      0 0 4px #fff,
+      0 0 6px #fff,
+      0 0 10px #f00,
+      0 0 45px #f00,
+      0 0 55px #f00,
+      0 0 70px #f00,
+      0 0 80px #f00;
   }
 }
 

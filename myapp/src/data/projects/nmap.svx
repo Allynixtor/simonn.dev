@@ -3,8 +3,9 @@ title: "Network Enumeration with Nmap Guide"
 description: "An article guide on how both attackers and defenders can use Nmap to enumerate a network."
 category: "security"
 image: "/assets/images/blog_posts/security/nmap.png"
-blog: "projects/nmap.svx"
-date: "2023-11-26"
+blog: "projects/nmap"
+date: "2023-11-03"
+completed: "no"
 ---
 
 # Network Enumeration with Nmap
