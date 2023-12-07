@@ -1,10 +1,10 @@
 ---
 title: "CSESoc Learn"
-description: "A Learning Platform for the CSESoc community to learn and share their knowledge and expertise in Computer Science."
+description: "A Learning Platform for the CSESoc community to learn and share their knowledge and expertise in Computer Science. I developed and maintained this platform with the Next.js framework and React."
 category: "web-dev"
 image: "/assets/images/blog_posts/web-dev/csesoc_learn.png"
 blog: "projects/csesoc_learn"
-date: "2023-12-02"
+date: "2022-02-22"
 completed: "no"
 ---
 

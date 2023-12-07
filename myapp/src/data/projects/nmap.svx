@@ -4,7 +4,7 @@ description: "An article guide on how both attackers and defenders can use Nmap 
 category: "security"
 image: "/assets/images/blog_posts/security/nmap.png"
 blog: "projects/nmap"
-date: "2023-11-27"
+date: "2023-11-03"
 completed: "no"
 ---
 

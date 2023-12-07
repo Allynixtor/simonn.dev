@@ -1,0 +1,12 @@
+---
+title: "NCSS Academic Tutor"
+description: "Over the summer of 2024, I will have the privilege of educating and mentoring high-achieving and motivated high school students across
+Australia in the field of Computer Science and Programming @ The University of Melbourne"
+category: "teaching"
+image: "/assets/images/blog_posts/teaching/NCSS.png"
+blog: "projects/NCSS"
+date: "2024-01-05"
+completed: "no"
+---
+
+# CSESoc Learn
